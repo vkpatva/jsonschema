@@ -2,7 +2,7 @@
   "$metadata": {
     "type": "coinvise",
     "uris": {
-      "jsonLdContext": "ipfs://QmeBsC14deJNCuHkzdCFNNweyQ6Y6SUoRiipEH7dRmEftD"
+      "jsonLdContext": "https://raw.githubusercontent.com/vkpatva/jsonschema/refs/heads/main/json-ld.json"
     },
     "version": "1.01"
   },
