@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "ipfs://QmQ51xQGRkdPjuoiSok76EcKExK9uK7tqF59RgYKWuPSHL"
+      "jsonLdContext": "https://raw.githubusercontent.com/vkpatva/jsonschema/refs/heads/main/result-json-ld.json"
     },
     "version": "1.0",
     "type": "Result"
