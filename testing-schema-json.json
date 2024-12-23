@@ -1,0 +1,171 @@
+{
+  "$metadata": {
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/vkpatva/jsonschema/refs/heads/main/testing-file.json"
+    },
+    "version": "1.0",
+    "type": "testingschema"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "test schema",
+  "title": "Testing Schema",
+  "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "name": {
+          "description": "name",
+          "title": "name",
+          "type": "string"
+        },
+        "age": {
+          "description": "age",
+          "title": "age",
+          "type": "integer"
+        },
+        "dob": {
+          "description": "dob",
+          "title": "dob",
+          "format": "date",
+          "type": "string"
+        },
+        "attribute": {
+          "description": "attribute which contain height , length , weight",
+          "title": "attribute",
+          "properties": {
+            "height": {
+              "description": "height",
+              "title": "height",
+              "type": "integer"
+            },
+            "weight": {
+              "description": "weight",
+              "title": "weight",
+              "type": "integer"
+            },
+            "place_of_birth": {
+              "description": "place of birth",
+              "title": "place of birth",
+              "properties": {
+                "city": {
+                  "description": "city",
+                  "title": "city",
+                  "type": "string"
+                },
+                "state": {
+                  "description": "state",
+                  "title": "state",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            }
+          },
+          "required": [],
+          "type": "object"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "@context": {
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
+}
