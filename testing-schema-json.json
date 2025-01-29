@@ -160,6 +160,7 @@
   },
   "required": [
     "credentialSubject",
+    "id",
     "@context",
     "issuanceDate",
     "issuer",
