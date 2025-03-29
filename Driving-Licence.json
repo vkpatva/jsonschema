@@ -1,0 +1,209 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/vkpatva/jsonschema/refs/heads/main/Driving-Licence-json-ld.json"
+        },
+        "version": "1.0",
+        "type": "drivinglicence"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Driving Licence Schema ",
+    "title": "Driving Licence",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "Governmnet": {
+                    "description": "Governmnet Name eg : Australia",
+                    "title": "Government",
+                    "type": "string"
+                },
+                "Full-Name": {
+                    "description": "Full Name of the person",
+                    "title": "Full Name",
+                    "type": "string"
+                },
+                "Licence-Number": {
+                    "description": "Licence Number",
+                    "title": "Licence Number",
+                    "type": "string"
+                },
+                "Expiry": {
+                    "description": "Date of Expiry of credential",
+                    "title": "Expiry",
+                    "format": "date",
+                    "type": "string"
+                },
+                "Date-of-Birth": {
+                    "description": "Date of Birth of User",
+                    "title": "Date of Birth",
+                    "type": "string"
+                },
+                "Class": {
+                    "description": "Class of the user",
+                    "title": "class",
+                    "properties": {
+                        "C-Class": {
+                            "description": "Class C - Car Licence ",
+                            "title": "C-Class",
+                            "type": "boolean"
+                        },
+                        "R-Class": {
+                            "description": "Rider Licence",
+                            "title": "R-Class",
+                            "type": "boolean"
+                        },
+                        "LR-Class": {
+                            "description": "Light Ride Class",
+                            "title": "Light Rigid Licence",
+                            "type": "boolean"
+                        },
+                        "MR-Class": {
+                            "description": "Medium Rigid Licence ",
+                            "title": "MR-Class",
+                            "type": "boolean"
+                        },
+                        "HC-Class": {
+                            "description": "Heavy Combination Class",
+                            "title": "HC-Class",
+                            "type": "boolean"
+                        },
+                        "MC-Class": {
+                            "description": "Multicombination Class",
+                            "title": "MC-Class",
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "C-Class",
+                        "R-Class",
+                        "LR-Class",
+                        "MR-Class",
+                        "HC-Class",
+                        "MC-Class"
+                    ],
+                    "type": "object"
+                },
+                "Address": {
+                    "description": "Address of the user",
+                    "title": "Address",
+                    "type": "string"
+                },
+                "Card-Number": {
+                    "description": "Card Number",
+                    "title": "Card Number",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Governmnet",
+                "Full-Name",
+                "Licence-Number",
+                "Expiry",
+                "Date-of-Birth",
+                "Class",
+                "Address",
+                "Card-Number"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}
