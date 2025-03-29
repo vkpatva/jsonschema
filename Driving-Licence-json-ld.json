@@ -1,0 +1,76 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "drivinglicence": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:140c4520-49d7-48f7-9eb8-178631dff941#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "Governmnet": {
+                        "@id": "polygon-vocab:Governmnet",
+                        "@type": "xsd:string"
+                    },
+                    "Full-Name": {
+                        "@id": "polygon-vocab:Full-Name",
+                        "@type": "xsd:string"
+                    },
+                    "Licence-Number": {
+                        "@id": "polygon-vocab:Licence-Number",
+                        "@type": "xsd:string"
+                    },
+                    "Expiry": {
+                        "@id": "polygon-vocab:Expiry",
+                        "@type": "xsd:dateTime"
+                    },
+                    "Date-of-Birth": {
+                        "@id": "polygon-vocab:Date-of-Birth",
+                        "@type": "xsd:string"
+                    },
+                    "Class": {
+                        "@context": {
+                            "C-Class": {
+                                "@id": "polygon-vocab:C-Class",
+                                "@type": "xsd:boolean"
+                            },
+                            "R-Class": {
+                                "@id": "polygon-vocab:R-Class",
+                                "@type": "xsd:boolean"
+                            },
+                            "LR-Class": {
+                                "@id": "polygon-vocab:LR-Class",
+                                "@type": "xsd:boolean"
+                            },
+                            "MR-Class": {
+                                "@id": "polygon-vocab:MR-Class",
+                                "@type": "xsd:boolean"
+                            },
+                            "HC-Class": {
+                                "@id": "polygon-vocab:HC-Class",
+                                "@type": "xsd:boolean"
+                            },
+                            "MC-Class": {
+                                "@id": "polygon-vocab:MC-Class",
+                                "@type": "xsd:boolean"
+                            }
+                        },
+                        "@id": "polygon-vocab:Class"
+                    },
+                    "Address": {
+                        "@id": "polygon-vocab:Address",
+                        "@type": "xsd:string"
+                    },
+                    "Card-Number": {
+                        "@id": "polygon-vocab:Card-Number",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:7f02c3af-1468-4d01-a2de-6f68c83a25b8"
+            }
+        }
+    ]
+}
