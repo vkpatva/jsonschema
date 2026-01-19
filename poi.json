@@ -1,0 +1,172 @@
+{
+  "$metadata": {
+    "type": "proofofIncomeVC",
+    "uris": {
+      "jsonLdContext": "ipfs://QmU364V9wDBvpP8WkrCG59mKmZa79m6Uns6Z19e3B63xki"
+    },
+    "version": "1.2"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Proof Of Income VC Schema",
+  "title": "Proof of Income VC",
+  "properties": {
+    "@context": {
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "fullName": {
+          "description": "Full Name Schema",
+          "title": "Full Name",
+          "type": "string"
+        },
+        "employerName": {
+          "description": "Employer Name Schema",
+          "title": "Employer Name",
+          "type": "string"
+        },
+        "employmentType": {
+          "description": "Employment Type Schema",
+          "title": "Employment Type",
+          "type": "string"
+        },
+        "totalIncome": {
+          "description": "Monthly Income Schema",
+          "title": "Total Income",
+          "type": "integer"
+        },
+        "currency": {
+          "description": "Currency Schema",
+          "title": "Currency",
+          "type": "string"
+        },
+        "incomeVerifiedDate": {
+          "description": "Income Verified Date",
+          "title": "Income Verified Date",
+          "type": "string"
+        },
+        "incomeVerificationMethod": {
+          "description": "Income Verification Method",
+          "title": "Income Verification Method",
+          "type": "string"
+        },
+        "incomePeriodStart": {
+          "description": "Income Period Start",
+          "title": "Income Period Start",
+          "type": "integer"
+        },
+        "incomePeriodEnd": {
+          "description": "Income Period End",
+          "title": "Income Period End",
+          "type": "integer"
+        },
+        "verifiedBy": {
+          "description": "Verified By",
+          "title": "Verified By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fullName",
+        "employerName"
+      ],
+      "type": "object"
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSubject",
+    "credentialSchema"
+  ],
+  "type": "object"
+}
