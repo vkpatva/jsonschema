@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://d2x9th3e9lh990.cloudfront.net/schemas/69c69f6a89e5c37b6408bb1e/proof_of_identification_v2.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/vkpatva/jsonschema/refs/heads/main/proof-of-identification.jsonld"
     },
     "version": "1.0",
     "type": "proofofidentification"
