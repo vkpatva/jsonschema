@@ -1,0 +1,39 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "proofofidentification": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "polygon-vocab": "urn:uuid:3d75a842-ae71-4f53-bed4-0df027bd4988#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "organisation": {
+            "@id": "polygon-vocab:organisation",
+            "@type": "xsd:string"
+          },
+          "full-name": {
+            "@id": "polygon-vocab:full-name",
+            "@type": "xsd:string"
+          },
+          "employee-number": {
+            "@id": "polygon-vocab:employee-number",
+            "@type": "xsd:string"
+          },
+          "department": {
+            "@id": "polygon-vocab:department",
+            "@type": "xsd:string"
+          },
+          "job-title": {
+            "@id": "polygon-vocab:job-title",
+            "@type": "xsd:string"
+          }
+        },
+        "@id": "urn:uuid:82618c47-9a9e-4388-91d3-dff32200a9cb"
+      }
+    }
+  ]
+}
